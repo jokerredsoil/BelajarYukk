@@ -9,7 +9,7 @@
     android:gravity="center"
     android:padding="40dp"
     android:layout_marginBottom="20dp"
-    android:background="@drawable/grad">
+    android:background="@drawable/mainbg">
 
     <ImageView
         android:layout_width="150dp"
@@ -60,14 +60,14 @@
         android:layout_height="wrap_content"
         android:text="Login Sekarang"
         android:id="@+id/btnLogin"
-        android:background="@color/colorAccent"/>
+        android:background="#BDECB6"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:text="Daftar Sekarang"
         android:id="@+id/btnDaftar"
-        android:background="@color/colorAccent"/>
+        android:background="#BDECB6"/>
 
 
 
