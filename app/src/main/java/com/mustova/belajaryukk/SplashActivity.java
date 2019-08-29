@@ -12,9 +12,11 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
 public class SplashActivity extends AppCompatActivity {
+
     public static SharedPreferences sh;
     public static SharedPreferences.Editor editor;
     public static final String FILENAME = "login";
+
     Animation anim;
     ImageView logo;
     @Override
@@ -24,6 +26,7 @@ public class SplashActivity extends AppCompatActivity {
 
         sh = getSharedPreferences("myprefe", 0);
         editor = sh.edit();
+
         anim = AnimationUtils.loadAnimation(this, R.anim.anim);
         logo = findViewById(R.id.logo);
         logo.setAnimation(anim);

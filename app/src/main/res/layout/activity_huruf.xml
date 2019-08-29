@@ -1,67 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HurufActivity"
-    android:background="@drawable/mainbg">
+    android:orientation="vertical"
+    android:background="@drawable/mainbg"
+    tools:context=".HurufActivity">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="30dp"
-        android:text="Belajar Alphabet"
+        android:text="Belajar Huruf"
+        android:layout_marginTop="40dp"
         android:textAlignment="center"
-        android:textSize="24dp"
+        android:textSize="26dp"
         android:textStyle="bold"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="25dp" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="c"
-        tools:layout_editor_absoluteX="296dp"
-        android:background="@drawable/btnbg"
-        tools:layout_editor_absoluteY="86dp" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="E"
-        tools:layout_editor_absoluteX="228dp"
-        android:background="@drawable/btnbg"
-        tools:layout_editor_absoluteY="170dp" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="B"
-        android:background="@drawable/btnbg"
-        tools:layout_editor_absoluteX="152dp"
-        tools:layout_editor_absoluteY="86dp" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="D"
-        tools:layout_editor_absoluteX="75dp"
-        android:background="@drawable/btnbg"
-        tools:layout_editor_absoluteY="170dp" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="A"
-        android:background="@drawable/btnbg"
-        tools:layout_editor_absoluteX="25dp"
-        tools:layout_editor_absoluteY="86dp" />
-
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="380dp"
-        android:background="@drawable/bgtv"
-        android:layout_margin="15dp"
-        tools:layout_editor_absoluteX="-16dp"
-        tools:layout_editor_absoluteY="252dp" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="100dp">
+
+        <ImageButton
+            android:id="@+id/btn01"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="fitCenter"
+
+            android:src="@drawable/btn_a01"/>
+
+        <ImageButton
+            android:id="@+id/btn02"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="fitCenter"
+
+            android:src="@drawable/btn_b01"/>
+
+        <ImageButton
+            android:id="@+id/btn03"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="fitCenter"
+
+            android:src="@drawable/btn_c01"/>
+        <ImageButton
+            android:id="@+id/btn04"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="fitCenter"
+
+            android:src="@drawable/btn_d01"/>
+        <ImageButton
+            android:id="@+id/btn05"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="fitCenter"
+
+            android:src="@drawable/btn_e01"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:id="@+id/gambar"
+        android:layout_height="340dp"
+        android:layout_margin="35dp"
+        android:layout_marginBottom="40dp"
+        android:background="@color/followersBg"
+
+      />
+
+
+</LinearLayout>

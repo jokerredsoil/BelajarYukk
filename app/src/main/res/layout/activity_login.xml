@@ -14,7 +14,7 @@
     <ImageView
         android:layout_width="150dp"
         android:layout_height="110dp"
-        android:src="@drawable/logo"
+        android:src="@drawable/a01"
         android:layout_marginBottom="155dp"/>
     <TextView
         android:layout_width="match_parent"
@@ -68,7 +68,6 @@
         android:text="Daftar Sekarang"
         android:id="@+id/btnDaftar"
         android:background="#BDECB6"/>
-
 
 
 </LinearLayout>

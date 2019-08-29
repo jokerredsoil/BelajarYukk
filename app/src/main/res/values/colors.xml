@@ -9,4 +9,6 @@
     <color name="circleBorder">#50FFFFFF</color>
     <color name="followersBg">#65DCE5</color>
     <color name="followingBg">#49BEFF</color>
+
+    <color name="nobg">#0000FFDF</color>
 </resources>

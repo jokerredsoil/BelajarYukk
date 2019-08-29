@@ -1,13 +1,3 @@
-
-
-
-
-
-
-
-
-
-
 package com.mustova.belajaryukk;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -30,6 +20,7 @@ public class RegisterActivity extends AppCompatActivity {
     TextView txtUser, txtPass, txtNama, txtEmail;
     EditText edtUser, edtPass, edtNama, edtEmail;
     Button btnReg;
+
 
     protected boolean shouldAskPermissions() {
         return (Build.VERSION.SDK_INT >

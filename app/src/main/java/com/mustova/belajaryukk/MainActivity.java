@@ -14,6 +14,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,8 +28,9 @@ import static com.mustova.belajaryukk.SplashActivity.editor;
 public class MainActivity extends AppCompatActivity {
 
     TextView txtwelcome;
-    Button btnList, btnMaps;
+    ImageButton buttonhuruf, buttonhewan, buttonkendaraan, buttonwarna;
     Toolbar toolbar;
+
     String[] dataUser;
 
     @Override
@@ -36,30 +38,59 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        buttonhuruf  = findViewById(R.id.btnhuruf);
+        buttonhewan = findViewById(R.id.btnhewan);
+        buttonkendaraan = findViewById(R.id.btnkendaraan);
+        buttonwarna = findViewById(R.id.btnwarna);
+
         txtwelcome = findViewById(R.id.txtWelcome);
         toolbar = findViewById(R.id.toolbar);
 
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Menu Utama");
-        readFile();
+        getSupportActionBar().setTitle("Belajar Yukkk");
 
+        readFile();
         if (dataUser != null) {
-            txtwelcome.setText("Welcome, " + dataUser[2] + "!!");
+            txtwelcome.setText("Welcome, " + dataUser[2] + " :)");
         } else {
             txtwelcome.setText(SplashActivity.sh.getString("namaLengkap", null));
         } //        get values from shared preferences
 
-
-        btnList.setOnClickListener(new View.OnClickListener() {
+        buttonhuruf.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, HurufActivity.class);
                 startActivity(intent);
             }
         });
+
+        buttonhewan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, HewanActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        buttonkendaraan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, KendaraanActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        buttonwarna.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, WarnaActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
-        private void readFile () {
+        private void readFile() {
             File file = new File(Common.directory, username + ".txt");
             try {
                 if (file.exists()) {
@@ -75,11 +106,10 @@ public class MainActivity extends AppCompatActivity {
                     br.close();
                     dataUser = text.toString().split(";");
                 }
-            } catch (Exception e) {
+            } catch(Exception e) {
                 Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
             }
         }
-
 
         @Override
         public boolean onCreateOptionsMenu (Menu menu){

@@ -15,12 +15,14 @@ import android.widget.Toast;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+
 import com.mustova.belajaryukk.Common;
 
 public class LoginActivity extends AppCompatActivity {
     TextView txtUser, txtPass;
     EditText edtUser, edtPass;
     Button btnLogin, btnDaftar;
+
     String[] dataUser;
     public static SharedPreferences sh;
     public static SharedPreferences.Editor editor;
